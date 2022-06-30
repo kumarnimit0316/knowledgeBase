@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link href="/public/css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="bg">
+    <%- include ('partials/nav.ejs') -%>
+        <br>
+        <div class="card" style="margin-left: 50px;margin-right: 50px;border-radius: 20px;border:none;">
+            <h2 style="text-align: center;">Edit Article</h1>
+                <div class="card-body" style="border-radius: 20px;border:none;">
+                    <form name="form1" method="POST" action="/article/edit/<%= article._id %>">
+                        <div>
+                            <div><b>Title: </b></div>
+                            <div><textarea class="form-control" name="title" rows="2"><%= article.title %></textarea>
+                            </div>
+                            <br>
+                            <div><b>Body: </b></div>
+                            <div><textarea class="form-control" name="body" rows="8"><%= article.body %></textarea>
+                            </div>
+                            <br>
+                            <div colspan="2" class="text-end"><input class="btn btn-outline-primary" type="submit"
+                                    value="update"></div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/public/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<div id="messages">
+  <% Object.keys(messages).forEach(function (type) { %>
+    <% messages[type].forEach(function (message) { %>
+      <div class="alert alert-<%=type%> alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <%= message %>
+      </div>
+      <% }) %>
+        </ul>
+        <% }) %>
+</div>
