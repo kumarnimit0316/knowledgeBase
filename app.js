@@ -88,7 +88,7 @@ var users = require("./routes/userroutes");
 app.use("/article", articles);
 app.use("/users", users);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`working on ${PORT}`);
